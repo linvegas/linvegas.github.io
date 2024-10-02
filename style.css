@@ -1,0 +1,129 @@
+/** RESET **/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark light;
+
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+
+  font-family:
+    system-ui, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+body {
+  margin: 0;
+  line-height: 1.4;
+  /*min-height: 100vh;*/
+
+  /*
+  font-family: system-ui;
+  font-size: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+*/
+}
+
+p, li, figcaption {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+h1, h2, h3, h4,
+input, button, label{
+  line-height: 1.1;
+}
+
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  font-style: italic;
+}
+
+ul, ol {
+  padding-left: 2.5ch;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input, button, select, textarea, optgroup {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+code, kbd, samp, pre {
+  font-family:
+    ui-monospace, SFMono-Regular, Consolas,
+    'Liberation Mono', Menlo, monospace;
+  font-size: 1em;
+}
+
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/** MAIN **/
+
+main, header {
+  margin-inline: auto;
+  width: min(100% - 3rem, 700px);
+}
+
+header {
+  /*background-color: gray;*/
+  /*padding-inline: 1rem;*/
+  padding-block: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h1#logo {
+    margin: 0;
+    font-size: 1.5rem;
+    font-family: monospace;
+    color: #8ebd6b;
+  }
+
+  & nav {
+    ul[role="list"] {
+      & li {
+        display: inline-block;
+        &:not(:first-child) {margin-left: 1rem;}
+      }
+    }
+  }
+}
+
+section {
+  display: none;
+
+  &:target {
+    display: block;
+  }
+}

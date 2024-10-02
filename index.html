@@ -1,53 +1,72 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
-    <title>Linvega's Portifolio</title>
+    <title>self.linvega</title>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
     <link rel="manifest" href="/assets/site.webmanifest">
-    <style> html { color-scheme: light dark; } </style>
-    <!-- <link href="style.css" rel="stylesheet"> -->
+
+    <link href="style.css" rel="stylesheet">
   </head>
-  <body style="margin-inline: auto;width: min(100% - 3rem, 700px);font-family: system-ui;font-size: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);">
-    <h1 style="text-align: center;">This is muh portifolio</h1>
-    <p>
-      I do programming stuff, mostly web development<br />
-      but i also do other types of programming :)
-    </p>
-    <h4>Projects i did:</h4>
-    <ul>
-      <li>
-        <a href="https://efood-three.vercel.app/" target="_blank">efood</a>
-      </li>
-      <li>
-        <a href="https://todo-vue-scosta.vercel.app/" target="_blank">todo-vue</a>
-      </li>
-      <li>
-        <a href="https://clone-disneyplus-nu.vercel.app/" target="_blank">disneyplus-landpage-clone</a>
-      </li>
-      <li>
-        <a href="https://github.com/linvegas/calc-py" target="_blank">calc-py</a>
-      </li>
-      <li>
-        <a href="https://gimmeshade-five.vercel.app/" target="_blank">gimmeshade</a>
-      </li>
-    </ul>
-    <p>You can check my projects <a href="https://github.com/linvegas" target="_blank">here</a>.</p>
-    <h4>Things i like:</h4>
-    <ul>
-      <li>Simplicity</li>
-      <li>Digital noises</li>
-      <li title="Autechre">æ</li>
-      <li>Desert Beaches</li>
-      <li>Silent Hill Ambience</li>
-      <li>Lain</li>
-      <li>Countryside</li>
-      <li>Blame!</li>
-    </ul>
+  <body>
+    <header>
+      <h1 id="logo">self.linvega</h1>
+      <nav>
+        <ul role="list">
+          <li><a href="#about-me">About me</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="about-me">
+        <p>
+          I do programming stuff, mostly web development<br />
+          but i also do other types of programming :)
+        </p>
+        <h4>Things i like:</h4>
+        <ul>
+          <li>Simplicity</li>
+          <li>Digital noises</li>
+          <li title="Autechre">æ</li>
+          <li>Desert Beaches</li>
+          <li>Silent Hill Ambience</li>
+          <li>Lain</li>
+          <li>Countryside</li>
+          <li>Blame!</li>
+        </ul>
+      </section>
+      <script>
+        window.location.hash = "#about-me";
+      </script>
+      <section id="projects">
+        <h4>Projects i did:</h4>
+        <ul>
+          <li>
+            <a href="https://efood-three.vercel.app/" target="_blank">efood</a>
+          </li>
+          <li>
+            <a href="https://todo-vue-scosta.vercel.app/" target="_blank">todo-vue</a>
+          </li>
+          <li>
+            <a href="https://clone-disneyplus-nu.vercel.app/" target="_blank">disneyplus-landpage-clone</a>
+          </li>
+          <li>
+            <a href="https://github.com/linvegas/calc-py" target="_blank">calc-py</a>
+          </li>
+          <li>
+            <a href="https://gimmeshade-five.vercel.app/" target="_blank">gimmeshade</a>
+          </li>
+        </ul>
+        <p>You can check my projects <a href="https://github.com/linvegas" target="_blank">here</a>.</p>
+      </section>
+    </main>
   </body>
 </html>
 
