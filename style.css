@@ -22,12 +22,7 @@ html {
 body {
   margin: 0;
   line-height: 1.4;
-  /*min-height: 100vh;*/
-
-  /*
-  font-family: system-ui;
-  font-size: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
-*/
+  min-height: 100vh;
 }
 
 p, li, figcaption {
@@ -89,7 +84,24 @@ code, kbd, samp, pre {
 
 /** MAIN **/
 
-main, header {
+:root {
+  --c-fg: white;
+
+  @media (prefers-color-scheme: light) {
+    --c-fg: black;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+header, main {
   margin-inline: auto;
   width: min(100% - 3rem, 700px);
 }
@@ -135,15 +147,19 @@ header {
       }
     }
   }
-  }
 }
 
-/*
-section {
-  display: none;
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-block: 0.5rem;
 
-  &:target {
-    display: block;
+  & svg {
+    width: 1.5rem;
+
+    & path {
+      fill: var(--c-fg);
+    }
   }
 }
-*/
