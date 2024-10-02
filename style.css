@@ -85,14 +85,24 @@ code, kbd, samp, pre {
 /** MAIN **/
 
 :root {
-  --c-fg: white;
+  --c-bg: #232326;
+  --c-fg: #eff0f1;
+  --c-accent: #8fb573;
+  --c-info: #57a5e5;
+  /*--c-mix: white;*/
 
   @media (prefers-color-scheme: light) {
-    --c-fg: black;
+    --c-bg: #fafafa;
+    --c-fg: #383a42;
+    --c-accent: #50a14f;
+    --c-info: #4078f2;
+    /*--c-mix: black;*/
   }
 }
 
 body {
+  background-color: var(--c-bg);
+  color: var(--c-fg);
   display: flex;
   flex-direction: column;
 }
@@ -122,7 +132,7 @@ header {
     margin: 0;
     font-size: 1.7rem;
     font-family: monospace;
-    color: #8ebd6b;
+    color: var(--c-accent);
   }
 
   & nav > ul[role="list"] {
@@ -139,11 +149,17 @@ header {
       }
 
       &.active {
-        color: lightblue;
+        color: var(--c-info);
 
         & a {
           text-decoration: underline;
         }
+      }
+
+      &:hover,
+      &:focus-visible {
+        color: var(--c-info);
+        transition: color linear 100ms;
       }
     }
   }
@@ -160,6 +176,16 @@ footer {
 
     & path {
       fill: var(--c-fg);
+
     }
+
+    &:hover,
+    &:focus-visible {
+      & path {
+        fill: var(--c-info);
+        transition: fill linear 100ms;
+      }
+    }
+
   }
 }
