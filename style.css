@@ -66,11 +66,6 @@ input, button, select, textarea, optgroup {
   font-size: inherit;
 }
 
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
 code, kbd, samp, pre {
   font-family:
     ui-monospace, SFMono-Regular, Consolas,
@@ -88,6 +83,7 @@ code, kbd, samp, pre {
   --c-bg: #232326;
   --c-fg: #eff0f1;
   --c-accent: #8fb573;
+  /*--c-accent2: #c49060;*/
   --c-info: #57a5e5;
   /*--c-mix: white;*/
 
@@ -95,6 +91,7 @@ code, kbd, samp, pre {
     --c-bg: #fafafa;
     --c-fg: #383a42;
     --c-accent: #50a14f;
+    /*--c-accent2: #c18401;*/
     --c-info: #4078f2;
     /*--c-mix: black;*/
   }
@@ -105,6 +102,11 @@ body {
   color: var(--c-fg);
   display: flex;
   flex-direction: column;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: var(--c-info);
 }
 
 main {
@@ -135,6 +137,10 @@ header {
     color: var(--c-accent);
   }
 
+  & .nav-link {
+    color: currentColor;
+  }
+
   & nav > ul[role="list"] {
     & li {
       display: inline-block;
@@ -162,6 +168,12 @@ header {
         transition: color linear 100ms;
       }
     }
+  }
+}
+
+section#projects {
+  & > ul h3 {
+    color: var(--c-accent);
   }
 }
 
