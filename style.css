@@ -175,6 +175,16 @@ section#projects {
   & > ul h3 {
     color: var(--c-accent);
   }
+
+  & p:last-child {
+    margin-block: 2rem;
+  }
+}
+
+section#blog {
+  & h3 {
+    text-align: center;
+  }
 }
 
 footer {
@@ -188,7 +198,6 @@ footer {
 
     & path {
       fill: var(--c-fg);
-
     }
 
     &:hover,
