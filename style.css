@@ -111,11 +111,12 @@ a:not([class]) {
 
 main {
   flex-grow: 1;
+  margin-top: 3rem;
 }
 
 header, main {
   margin-inline: auto;
-  width: min(100% - 3rem, 700px);
+  width: min(100% - 3rem, 800px);
 }
 
 header {
